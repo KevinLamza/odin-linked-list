@@ -21,6 +21,19 @@ export const LinkedList = class {
       this.head = new Node(value, tmp);
     }
   }
+  size() {
+    if (this.head === null) {
+      return 0;
+    } else {
+      let tmp = this.head;
+      let length = 1;
+      while (tmp.nextNode != null) {
+        tmp = tmp.nextNode;
+        length = ++length;
+      }
+      return length;
+    }
+  }
 };
 
 export const Node = class {

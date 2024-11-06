@@ -17,3 +17,4 @@ list1.append(1);
 list1.append(3);
 list1.prepend(0);
 console.log(list1);
+console.log(list1.size());
