@@ -86,6 +86,22 @@ export const LinkedList = class {
       prev.nextNode = null;
     }
   }
+  contains(value) {
+    if (this.head === null) {
+      console.log('Invalid operation');
+      return;
+    } else {
+      let tmp = this.head;
+      if (tmp.value === value) return true;
+      while (tmp.nextNode != null) {
+        tmp = tmp.nextNode;
+        if (tmp.value === value) {
+          return true;
+        }
+      }
+      return false;
+    }
+  }
 };
 
 export const Node = class {
