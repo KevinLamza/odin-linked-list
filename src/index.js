@@ -18,3 +18,5 @@ list1.append(3);
 list1.prepend(0);
 console.log(list1);
 console.log(list1.size());
+console.log(list1.firstNode());
+console.log(list1.lastNode());

@@ -34,6 +34,16 @@ export const LinkedList = class {
       return length;
     }
   }
+  firstNode() {
+    return this.head;
+  }
+  lastNode() {
+    let tmp = this.head;
+    while (tmp.nextNode != null) {
+      tmp = tmp.nextNode;
+    }
+    return tmp;
+  }
 };
 
 export const Node = class {
