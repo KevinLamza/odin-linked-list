@@ -2,8 +2,8 @@
 import './styles.css';
 
 // Just to have a template for the file importing
-import { greeting } from './greeting.js';
-console.log(greeting);
+import { LinkedList } from './linkedList.js';
+import { node } from './linkedList.js';
 
 // Another webpack check
 if (process.env.NODE_ENV !== 'production') {
@@ -11,3 +11,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // ---------------------- START YOUR CODE BELOW HERE
+
+let list1 = new LinkedList();
+list1.append(1);
+list1.append(3);
+list1.prepend(0);
+console.log(list1);
