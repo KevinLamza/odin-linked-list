@@ -135,6 +135,40 @@ export const LinkedList = class {
       console.log(string);
     }
   }
+  insertAt(value, index) {
+    if (this.head === null) {
+      console.log('Invalid operation');
+      return;
+    }
+    let tmp = this.head;
+    let prev = null;
+    if (index === 0) this.prepend(value);
+    else {
+      for (let i = 0; i < index; i++) {
+        if (tmp === null) return;
+        prev = tmp;
+        tmp = tmp.nextNode;
+      }
+      prev.nextNode = new Node(value, tmp);
+    }
+  }
+  removeAt(index) {
+    if (this.head === null) {
+      console.log('Invalid operation');
+      return;
+    }
+    let tmp = this.head;
+    let prev = null;
+    if (index === 0) this.head = this.head.nextNode;
+    else {
+      for (let i = 0; i < index; i++) {
+        if (tmp === null) return;
+        prev = tmp;
+        tmp = tmp.nextNode;
+      }
+      prev.nextNode = tmp.nextNode;
+    }
+  }
 };
 
 export const Node = class {

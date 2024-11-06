@@ -25,4 +25,6 @@ list1.prepend('bunny');
 // // console.log(list1.at(4));
 // console.log(list1.contains(6));
 // console.log(list1.find(6));
+list1.insertAt('horse', 0);
+list1.removeAt(0);
 list1.toString();
