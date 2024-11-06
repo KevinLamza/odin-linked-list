@@ -120,6 +120,21 @@ export const LinkedList = class {
       return null;
     }
   }
+  toString() {
+    if (this.head === null) {
+      console.log('Invalid operation');
+      return;
+    } else {
+      let string = `( ${this.head.value} )`;
+      let tmp = this.head;
+      while (tmp.nextNode != null) {
+        tmp = tmp.nextNode;
+        string = string + ` -> ( ${tmp.value} )`;
+      }
+      string = string + ` -> null`;
+      console.log(string);
+    }
+  }
 };
 
 export const Node = class {

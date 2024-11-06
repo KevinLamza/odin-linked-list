@@ -13,15 +13,16 @@ if (process.env.NODE_ENV !== 'production') {
 // ---------------------- START YOUR CODE BELOW HERE
 
 let list1 = new LinkedList();
-list1.append(1);
-list1.append(3);
-list1.append(4);
-list1.prepend(0);
+list1.append('dog');
+list1.append('cat');
+list1.append('turtle');
+list1.prepend('bunny');
 // list1.pop();
-console.log(list1);
-// console.log(list1.size());
-// console.log(list1.firstNode());
-console.log(list1.lastNode());
-// console.log(list1.at(4));
-console.log(list1.contains(6));
-console.log(list1.find(6));
+// console.log(list1);
+// // console.log(list1.size());
+// // console.log(list1.firstNode());
+// console.log(list1.lastNode());
+// // console.log(list1.at(4));
+// console.log(list1.contains(6));
+// console.log(list1.find(6));
+list1.toString();
