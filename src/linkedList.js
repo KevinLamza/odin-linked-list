@@ -102,6 +102,24 @@ export const LinkedList = class {
       return false;
     }
   }
+  find(value) {
+    if (this.head === null) {
+      console.log('Invalid operation');
+      return;
+    } else {
+      let tmp = this.head;
+      let index = 0;
+      if (tmp.value === value) return index;
+      while (tmp.nextNode != null) {
+        tmp = tmp.nextNode;
+        index = ++index;
+        if (tmp.value === value) {
+          return index;
+        }
+      }
+      return null;
+    }
+  }
 };
 
 export const Node = class {
